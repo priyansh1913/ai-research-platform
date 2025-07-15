@@ -30,31 +30,8 @@ ai-research-platform/
 - **Advanced Prompt Engineering** with multi-subject optimization
 - **Secure Environment Configuration** with no hardcoded API keys
 
-## 🚀 Quick Start
+## 🚀 How to Run the Program
 
-### Option 1: Frontend Development
-```bash
-git clone https://github.com/priyansh1913/ai-research-platform.git
-cd ai-research-platform
-git checkout frontend
-npm install
-npm start
-# Frontend runs on http://localhost:3000
-```
-
-### Option 2: Backend Development
-```bash
-git clone https://github.com/priyansh1913/ai-research-platform.git
-cd ai-research-platform
-git checkout backend
-pip install -r requirements.txt
-cp .env.example .env
-# Edit .env with your API keys
-uvicorn main:app --reload --host 0.0.0.0 --port 8000
-# Backend runs on http://localhost:8000
-```
-
-### Option 3: Full Stack Development
 ```bash
 # Terminal 1 - Backend
 git clone https://github.com/priyansh1913/ai-research-platform.git
@@ -127,49 +104,6 @@ git checkout backend
 git checkout main
 ```
 
-## 🛠️ Development Workflow
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/priyansh1913/ai-research-platform.git
-cd ai-research-platform
-```
-
-### 2. Choose Your Development Focus
-- **Frontend**: `git checkout frontend` - Work on React UI components
-- **Backend**: `git checkout backend` - Work on API and AI integrations
-- **Full Stack**: Use both branches in separate terminal sessions
-
-### 3. Environment Setup
-Each branch contains detailed setup instructions in its respective README:
-- Frontend README: React development setup and component architecture
-- Backend README: Python environment, API keys, and service configuration
-
-## 🔒 Security & Best Practices
-
-- ✅ **No hardcoded API keys** - All secrets use environment variables
-- ✅ **GitHub security compliance** - Passes all security scans
-- ✅ **Comprehensive .gitignore** - Protects sensitive files and dependencies
-- ✅ **Environment templates** - Easy setup with `.env.example` files
-- ✅ **Branch isolation** - Clean separation of frontend and backend code
-
-## 🚀 Deployment
-
-### Frontend Deployment
-The React frontend can be deployed to:
-- **Vercel** (recommended for React)
-- **Netlify** 
-- **GitHub Pages**
-- **AWS S3 + CloudFront**
-
-### Backend Deployment
-The FastAPI backend can be deployed to:
-- **Railway** (recommended for Python)
-- **Render**
-- **Heroku**
-- **AWS EC2 + Docker**
-- **Google Cloud Run**
-
 ## 📖 Documentation
 
 Each branch contains comprehensive documentation:
@@ -178,27 +112,6 @@ Each branch contains comprehensive documentation:
 - **Backend Branch**: API documentation, AI service setup, deployment guide
 - **Main Branch**: Project overview, setup instructions, architecture decisions
 
-## 🤝 Contributing
 
-1. Fork the repository
-2. Choose the appropriate branch (`frontend` or `backend`)
-3. Create a feature branch: `git checkout -b feature/amazing-feature`
-4. Make your changes and commit: `git commit -m "Add amazing feature"`
-5. Push to your fork: `git push origin feature/amazing-feature`
-6. Create a Pull Request to the appropriate branch
 
-## 📄 License
 
-This project is open source and available under the MIT License.
-
-## 🆘 Support
-
-- **Issues**: Report bugs or request features via GitHub Issues
-- **Documentation**: Detailed setup guides in each branch's README
-- **API Docs**: Interactive documentation at `http://localhost:8000/docs` when backend is running
-
----
-
-**🎯 Ready to start?** Choose your development path above and dive into the respective branch for detailed instructions!
-
-**⭐ Enjoying the project?** Give it a star on GitHub and share it with other developers!
