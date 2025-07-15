@@ -1,0 +1,123 @@
+# Together API configuration
+together_api_key: aae4df9b55aac57c9eb93eb54447a9943aa0c9830bd8a1925f418f19f2315d0e
+
+models:
+  # Primary research model
+  research:
+    model: "mistralai/Mistral-7B-Instruct-v0.2"
+    temperature: 0.7
+    max_tokens: 2048
+    top_p: 0.9
+
+  # Summarization model
+  summarization:
+    model: "mistralai/Mistral-7B-Instruct-v0.2"
+    temperature: 0.5
+    max_tokens: 1000
+    top_p: 0.9
+
+  # Analysis model
+  analysis:
+    model: "mistralai/Mistral-7B-Instruct-v0.2"
+    temperature: 0.6
+    max_tokens: 1500
+    top_p: 0.9
+
+  # Fact checking model
+  fact_checking:
+    model: "mistralai/Mistral-7B-Instruct-v0.2"
+    temperature: 0.3
+    max_tokens: 1000
+    top_p: 0.95
+
+# Prompt templates for different research steps
+prompt_templates:
+  initial_research: |
+    Conduct comprehensive research on the topic: "{topic}"
+    
+    Please provide detailed information including:
+    1. Basic facts and overview
+    2. Key historical information
+    3. Current status and developments
+    4. Important figures or entities involved
+    5. Recent news or updates
+    6. Relevant statistics or data
+
+    Provide accurate, well-structured information that would be useful for someone wanting to understand this topic thoroughly.
+
+  fact_checking: |
+    Review the following research content for accuracy and completeness:
+
+    {research_content}
+
+    Please:
+    1. Identify any claims that need verification
+    2. Point out potential inaccuracies or biases
+    3. Suggest additional reliable sources
+    4. Highlight any missing important information
+    5. Provide confidence levels for key facts
+
+    Focus on ensuring the information is reliable and well-sourced.
+
+  deep_analysis: |
+    Perform a deep analysis of the following research content:
+
+    {research_content}
+
+    Please provide:
+    1. Critical analysis of the key points
+    2. Connections between different aspects
+    3. Broader implications and context
+    4. Potential controversies or debates
+    5. Comparative analysis with related topics
+    6. Future trends or developments
+
+    Provide thoughtful insights that go beyond the surface-level information.
+
+  insights_generation: |
+    Based on the following research data, generate key insights:
+
+    {research_content}
+
+    Please identify:
+    1. The most important takeaways
+    2. Surprising or counterintuitive findings
+    3. Patterns or trends that emerge
+    4. Practical applications or implications
+    5. Questions that arise from the research
+    6. Areas requiring further investigation
+
+    Focus on actionable insights and meaningful conclusions.
+
+  summarization: |
+    Create a comprehensive summary of the following research:
+
+    {research_content}
+
+    Provide:
+    1. Executive summary (2-3 sentences)
+    2. Key findings (bullet points)
+    3. Main conclusions
+    4. Important context
+    5. Significance of the findings
+
+    Keep it concise but comprehensive, suitable for someone who wants a quick overview.
+
+  report_compilation: |
+    Compile a final research report based on the following components:
+
+    Research Content: {research_content}
+    Fact Check Results: {fact_check_results}
+    Analysis: {analysis_results}
+    Insights: {insights}
+
+    Create a well-structured, professional report that includes:
+    1. Executive Summary
+    2. Introduction
+    3. Key Findings
+    4. Detailed Analysis
+    5. Insights and Implications
+    6. Conclusions
+    7. Areas for Further Research
+
+    Format the report in markdown with clear headings and structure.

@@ -1,0 +1,4 @@
+together_api_key: "your_together_ai_api_key_here"
+model: "mistralai/Mistral-7B-Instruct-v0.2"
+serverless_only: true
+replicate_api_key: "your_replicate_api_key_here"  # Required for AI image generation

@@ -1,0 +1,27 @@
+﻿# Together API configuration
+together_api_key: "aae4df9b55aac57c9eb93eb54447a9943aa0c9830bd8a1925f418f19f2315d0e"
+
+models:
+  research:
+    model: "mistralai/Mistral-7B-Instruct-v0.2"
+    temperature: 0.7
+    max_tokens: 2048
+    top_p: 0.9
+
+  summarization:
+    model: "mistralai/Mistral-7B-Instruct-v0.2"
+    temperature: 0.5
+    max_tokens: 1000
+    top_p: 0.9
+
+  analysis:
+    model: "mistralai/Mistral-7B-Instruct-v0.2"
+    temperature: 0.6
+    max_tokens: 1500
+    top_p: 0.9
+
+  fact_checking:
+    model: "mistralai/Mistral-7B-Instruct-v0.2"
+    temperature: 0.3
+    max_tokens: 1000
+    top_p: 0.95
