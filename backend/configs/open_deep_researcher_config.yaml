@@ -1,0 +1,6 @@
+together_api_key: "${TOGETHER_API_KEY}"
+model: "mistralai/Mistral-7B-Instruct-v0.2"
+serverless_only: true
+replicate_api_key: "${REPLICATE_API_KEY}"  # Required for AI image generation
+huggingface_api_key: "${HUGGINGFACE_API_KEY}"  # FREE Hugging Face API key for image generation
+huggingface_image_model: "stabilityai/stable-diffusion-xl-base-1.0"  # Best free model for high-quality images

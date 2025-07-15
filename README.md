@@ -2,16 +2,23 @@
 
 A powerful AI-powered research application with modern frontend and backend architecture, featuring advanced research enhancement and AI image generation capabilities.
 
-## 🏗️ Repository Architecture
-
-This repository uses a **branch-based architecture** for clean separation of concerns:
+## 🏗️ Repository Structure
 
 ```
 ai-research-platform/
-├── main branch      # 📋 Project overview & documentation (you are here)
-├── frontend branch  # ⚛️ React application with modern UI
-└── backend branch   # 🚀 FastAPI server with AI integrations
+├── README.md           # 📋 Project overview & setup guide
+├── backend/            # 🚀 FastAPI server with AI integrations
+│   ├── main.py         #     FastAPI application entry point
+│   ├── requirements.txt#     Python dependencies
+│   ├── .env.example    #     Environment variables template
+│   └── configs/        #     Configuration files
+└── frontend/           # ⚛️ React application
+    ├── src/            #     React components and logic
+    ├── public/         #     Static assets
+    └── package.json    #     Node.js dependencies
 ```
+
+**🎯 Simple Structure**: Everything you need is in the main branch - no branch switching required!
 
 ## 🌟 Features Overview
 
@@ -30,47 +37,40 @@ ai-research-platform/
 - **Advanced Prompt Engineering** with multi-subject optimization
 - **Secure Environment Configuration** with no hardcoded API keys
 
-## 🚀 Quick Start
+## ⚡ Quick Start (Everything in Main Branch!)
 
-### Option 1: Frontend Development
+### Backend Setup (Terminal 1):
 ```bash
 git clone https://github.com/priyansh1913/ai-research-platform.git
 cd ai-research-platform
-git checkout frontend
-npm install
-npm start
-# Frontend runs on http://localhost:3000
-```
-
-### Option 2: Backend Development
-```bash
-git clone https://github.com/priyansh1913/ai-research-platform.git
-cd ai-research-platform
-git checkout backend
+cd backend
+python -m venv venv
+.\venv\Scripts\activate          # Windows
+# source venv/bin/activate       # Mac/Linux
 pip install -r requirements.txt
 cp .env.example .env
 # Edit .env with your API keys
-uvicorn main:app --reload --host 0.0.0.0 --port 8000
-# Backend runs on http://localhost:8000
+uvicorn main:app --reload --port 8000
 ```
 
-### Option 3: Full Stack Development
+### Frontend Setup (Terminal 2):
 ```bash
-# Terminal 1 - Backend
-git clone https://github.com/priyansh1913/ai-research-platform.git
-cd ai-research-platform
-git checkout backend
-pip install -r requirements.txt
-cp .env.example .env
-# Edit .env with your API keys
-uvicorn main:app --reload --host 0.0.0.0 --port 8000
-
-# Terminal 2 - Frontend  
-cd ai-research-platform
-git checkout frontend
+cd ai-research-platform/frontend
 npm install
 npm start
 ```
+
+### 🔑 Get Your API Keys (Required):
+- **Hugging Face**: https://huggingface.co/settings/tokens (Free)
+- **Together AI**: https://api.together.xyz/ (Free tier available)
+- **Replicate**: https://replicate.com/account/api-tokens (Pay per use)
+
+### 🌐 Access Your App:
+- **Web Interface**: http://localhost:3000
+- **API Documentation**: http://localhost:8000/docs
+- **Health Check**: http://localhost:8000/health
+
+That's it! Full AI research platform running in 5 minutes! 🎉
 
 ## 🔑 API Keys Required
 
@@ -111,21 +111,18 @@ The backend provides these REST API endpoints:
 - **PyYAML** - Configuration management
 - **Uvicorn** - Lightning-fast ASGI server
 
-## 📂 Branch Navigation
+## 📂 Project Navigation
 
-```bash
-# View all available branches
-git branch -a
+### Directory Structure:
+- **`backend/`** - All Python/FastAPI server code
+- **`frontend/`** - All React application code  
+- **`README.md`** - This setup guide
 
-# Switch to frontend development
-git checkout frontend
-
-# Switch to backend development  
-git checkout backend
-
-# Return to project overview
-git checkout main
-```
+### No Branch Switching Required!
+Everything you need is in the main branch. Simply:
+1. `cd backend` - Work on API and AI features
+2. `cd frontend` - Work on UI and React components
+3. Both can run simultaneously for full-stack development
 
 ## 🛠️ Development Workflow
 
@@ -135,15 +132,28 @@ git clone https://github.com/priyansh1913/ai-research-platform.git
 cd ai-research-platform
 ```
 
-### 2. Choose Your Development Focus
-- **Frontend**: `git checkout frontend` - Work on React UI components
-- **Backend**: `git checkout backend` - Work on API and AI integrations
-- **Full Stack**: Use both branches in separate terminal sessions
+### 2. Setup Backend
+```bash
+cd backend
+python -m venv venv
+.\venv\Scripts\activate  # Windows
+pip install -r requirements.txt
+cp .env.example .env
+# Edit .env with your API keys
+uvicorn main:app --reload --port 8000
+```
 
-### 3. Environment Setup
-Each branch contains detailed setup instructions in its respective README:
-- Frontend README: React development setup and component architecture
-- Backend README: Python environment, API keys, and service configuration
+### 3. Setup Frontend (New Terminal)
+```bash
+cd frontend
+npm install
+npm start
+```
+
+### 4. Start Developing!
+- **Backend code**: Edit files in `backend/` directory
+- **Frontend code**: Edit files in `frontend/src/` directory
+- **Hot reload**: Both servers automatically reload on file changes
 
 ## 🔒 Security & Best Practices
 
