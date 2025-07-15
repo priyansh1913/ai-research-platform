@@ -150,19 +150,6 @@ npm install
 npm start
 ```
 
-### 4. Start Developing!
-- **Backend code**: Edit files in `backend/` directory
-- **Frontend code**: Edit files in `frontend/src/` directory
-- **Hot reload**: Both servers automatically reload on file changes
-
-## 🔒 Security & Best Practices
-
-- ✅ **No hardcoded API keys** - All secrets use environment variables
-- ✅ **GitHub security compliance** - Passes all security scans
-- ✅ **Comprehensive .gitignore** - Protects sensitive files and dependencies
-- ✅ **Environment templates** - Easy setup with `.env.example` files
-- ✅ **Branch isolation** - Clean separation of frontend and backend code
-
 ## 🚀 Deployment
 
 ### Frontend Deployment
@@ -188,24 +175,6 @@ Each branch contains comprehensive documentation:
 - **Backend Branch**: API documentation, AI service setup, deployment guide
 - **Main Branch**: Project overview, setup instructions, architecture decisions
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Choose the appropriate branch (`frontend` or `backend`)
-3. Create a feature branch: `git checkout -b feature/amazing-feature`
-4. Make your changes and commit: `git commit -m "Add amazing feature"`
-5. Push to your fork: `git push origin feature/amazing-feature`
-6. Create a Pull Request to the appropriate branch
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
-## 🆘 Support
-
-- **Issues**: Report bugs or request features via GitHub Issues
-- **Documentation**: Detailed setup guides in each branch's README
-- **API Docs**: Interactive documentation at `http://localhost:8000/docs` when backend is running
 
 ---
 
