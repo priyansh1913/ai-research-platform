@@ -105,12 +105,4 @@ backend/
 └── README.md                           # This file
 ```
 
-## 🔒 Security
 
-- API keys are stored as environment variables (never in code)
-- `.env` files are git-ignored for security
-- Use `.env.example` as a template for required variables
-
-## 📄 License
-
-This project is open source and available under the MIT License.
