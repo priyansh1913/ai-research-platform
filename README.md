@@ -86,7 +86,5 @@ This project uses Create React App as the foundation. All standard CRA features 
 
 See `package.json` for complete list of dependencies.
 
-## License
-
-This project is open source and available under the MIT License.
+.
 
